@@ -1,6 +1,6 @@
 //package org.example;
 //
-//import org.example.dto.test;
+//import org.example.tests.HelloController.test;
 //import org.junit.After;
 //import org.junit.Test;
 //import org.junit.runner.RunWith;
