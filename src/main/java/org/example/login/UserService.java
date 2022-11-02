@@ -2,9 +2,7 @@ package org.example.login;
 
 
 import lombok.RequiredArgsConstructor;
-import org.example.login.UserInfo;
-import org.example.login.UserInfoDto;
-import org.example.login.UserRepository;
+import org.example.Entity.UserInfo;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
