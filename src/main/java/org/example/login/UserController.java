@@ -16,11 +16,11 @@ public class UserController {
 
     private final UserService userService;
 
-    @PostMapping("/user")
-    public String signup(UserInfoDto infoDto) { // 회원 추가
-        userService.save(infoDto);
-        return "redirect:/login";
-    }
+//    @PostMapping("/user")
+//    public String signup(UserInfoDto infoDto) { // 회원 추가
+//        userService.save(infoDto);
+//        return "redirect:/login";
+//    }
 
     @GetMapping(value = "/logout")
     public String logoutPage(HttpServletRequest request, HttpServletResponse response) {

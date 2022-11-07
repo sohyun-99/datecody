@@ -19,6 +19,5 @@ public class Station_bundang {
 
     @Column(name = "email", unique = true)
     private int kind; //종류 : 식사(1)/ 디저트(2) / 액티비티(3)
-
     private String etc; //기타 내용
 }

@@ -20,15 +20,15 @@ public class UserService implements UserDetailsService {
      * @param infoDto 회원정보가 들어있는 DTO
      * @return 저장되는 회원의 PK
      */
-    public Long save(UserInfoDto infoDto) {
-        BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
-        infoDto.setPassword(encoder.encode(infoDto.getPassword()));
-
-        return userRepository.save(UserInfo.builder()
-                .email(infoDto.getEmail())
-                .auth(infoDto.getAuth())
-                .password(infoDto.getPassword()).build()).getCode();
-    }
+//    public Long save(UserInfoDto infoDto) {
+//        BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
+//        infoDto.setPassword(encoder.encode(infoDto.getPassword()));
+//
+//        return userRepository.save(UserInfo.builder()
+//                .email(infoDto.getEmail())
+//                .auth(infoDto.getAuth())
+//                .password(infoDto.getPassword()).build()).getCode();
+//    }
 
     /**
      * Spring Security 필수 메소드 구현
