@@ -1,30 +1,34 @@
 package org.example.Entity;
 
-import lombok.Builder;
-import org.springframework.security.core.GrantedAuthority;
-import org.springframework.security.core.authority.SimpleGrantedAuthority;
+import lombok.*;
+//import org.springframework.security.core.GrantedAuthority;
+//import org.springframework.security.core.authority.SimpleGrantedAuthority;
 
-import javax.persistence.Column;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.util.Collection;
 import java.util.HashSet;
 import java.util.Set;
 
+@Entity
+@Getter
+@Builder
+@EqualsAndHashCode
+@NoArgsConstructor(access = AccessLevel.PROTECTED)
+@AllArgsConstructor
 public class location {
     @Id
-    @Column(name = "code")
+    //@Column(name = "locationName")
     @GeneratedValue(strategy= GenerationType.IDENTITY)
-    private String locationName; //지역명
+    private int localId; //지역명
 
-    @Column(name = "email", unique = true)
+    private int localName; //역명
+    //@Column(name = "email", unique = true)
     private String email;
 
-    @Column(name = "password")
+    //@Column(name = "password")
     private String password;
 
-    @Column(name = "auth")
+    //@Column(name = "auth")
     private String auth;
 
 }
