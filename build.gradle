@@ -38,8 +38,8 @@ dependencies {
 
 
     implementation 'mysql:mysql-connector-java' //mysql
-//    implementation 'org.springframework.boot:spring-boot-starter-security' //스프링 시큐리티 의존성
-   implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
+    implementation 'org.springframework.boot:spring-boot-starter-security' //스프링 시큐리티 의존성
+    implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
     implementation group: 'org.mariadb.jdbc' ,name: 'mariadb-java-client' , version :'2.7.0'
     implementation 'org.thymeleaf.extras:thymeleaf-extras-springsecurity5'
 }

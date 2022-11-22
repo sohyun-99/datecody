@@ -1,10 +1,10 @@
-//package org.example.login;
-//
-//import org.example.Entity.UserInfo;
-//import org.springframework.data.jpa.repository.JpaRepository;
-//
-//import java.util.Optional;
-//
-//public interface UserRepository extends JpaRepository<UserInfo, Long> {
-//    Optional<UserInfo> findByEmail(String email);
-//}
+package org.example.login;
+
+import org.example.Entity.UserInfo;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import java.util.Optional;
+
+public interface UserRepository extends JpaRepository<UserInfo, Long> {
+    Optional<UserInfo> findByEmail(String email);
+}
