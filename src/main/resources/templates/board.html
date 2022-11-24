@@ -1,32 +1,28 @@
 <!-- 게시글 목록 -->
-<th:block th:each="board : ${boards}">
-  <a class="card" th:href="'./' + ${rootURL} + '/' + ${board.getId()}">
+<th:block>
+  <a class="card">
     <div class="card-body">
       <div class="row">
         <div class="col-md-7 d-flex align-items-center gap-1">
-          <span th:text="${board.getTitle()}" class="flex-grow-1 fw-bold text-start"></span>
-          <i class="far fa-image" th:if="${board.getContent().contains('![image](')}"></i>
-          <i class="fa fa-paperclip" th:if="${board.getAttachmentName() != null && !board.getAttachmentName().isEmpty()}"></i>
+          <span th:text="안뇽" class="flex-grow-1 fw-bold text-start"></span>
         </div>
         <div class="col-md-5 board-card-detail">
           <div class="row row-cols-auto">
-            <div class="col-md-3" th:if="${selectedSyllabusId.isEmpty()}">
+            <div class="col-md-3">
               <i class="fas fa-graduation-cap d-md-none"></i>
-              <span th:text="${board.getSyllabus().getName()}"></span>
+              <span th:text="체크2"></span>
             </div>
             <div class="col-md-3 ms-md-auto">
               <i class="fas fa-user d-md-none"></i>
-              <span th:text="${board.getMember().getName()}"></span>
+              <span th:text="체크3"></span>
             </div>
             <div class="col-md-4">
               <i class="fas fa-calendar-alt d-md-none"></i>
-              <span th:text="${#dates.createToday().compareTo(board.getDate()) < 0 ?
-                #dates.format(board.getDate(), 'HH:mm') :
-                #dates.format(board.getDate(), 'yyyy-MM-dd')}"></span>
+              <span th:text="체크4"></span>
             </div>
             <div class="col-md-2">
               <i class="fas fa-eye d-md-none"></i>
-              <span th:text="${board.getView()}"></span>
+              <span th:text="체크5"></span>
             </div>
           </div>
         </div>

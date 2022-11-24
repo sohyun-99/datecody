@@ -1,0 +1,56 @@
+<meta th:replace="frame/top.html">
+<!-- add your css here -->
+<title>프레임입니당</title>
+<html xmlns:th="http://www.thymeleaf.org">
+<!-- add your content here! -->
+<!--//여기에는 각각 스토어에 대해 정보를 표시해주는 곳-->
+<!--//스토어 사진(임시), 이름 , etc , 연관된 지하철 역-->
+<!--//추후 데이터 삽입 : 역과의 거리 , 스토어 사진 , 위치-->
+
+<!--//그 스토어 고유 번호랑 (분당선인지 1호선인지)(고민) 받아오라고 하자-->
+<!--//그 고유번호에 대해 창을 띄워주면 될듯-->
+<!--//station=bundang&storeId=1 이런식 예상-->
+
+<div class="col-lg-6">
+    <div class="card shadow mb-4">
+        <div class="card-header py-3">
+            <h6 class="m-0 font-weight-bold text-primary">가게 정보</h6>
+        </div>
+        <div class="card-body">
+
+            <tr>
+                <th>가게 이름</th>
+                <td th:text="${stationList.get(0).getStoreName()}"></td>
+                </br>
+            </tr>
+            <tr>
+                <th>가게 근처 지하철 명</th>
+                <td th:text="${stationList.get(0).getStationName()}"></td>
+                </br>
+            </tr>
+            <tr>
+                <th>학번</th>
+                <td th:text="${stationList.get(0).getKind()}"></td>
+                </br>
+            </tr>
+            <tr>
+                <th>학번</th>
+                <td th:text="${stationList.get(0).getEtc()}"></td>
+                </br>
+
+            </tr>
+            <tr>
+                <th>👍 (추천수)</th>
+                <td th:text="${stationList.get(0).getRecommend()}"></td>
+                </br>
+
+            </tr>
+        </div>
+    </div>
+</div>
+
+</div>
+</html>
+
+<!-- add your js here -->
+<meta th:replace="frame/footer.html">

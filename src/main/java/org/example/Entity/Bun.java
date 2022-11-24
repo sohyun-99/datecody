@@ -21,5 +21,5 @@ public class Bun {
     //@Column(name = "kind", unique = true)
     private int kind; //종류 : 식사(1)/ 디저트(2) / 액티비티(3)
     private String etc; //기타 내용
-
+    private int recommend; //추천 수
 }

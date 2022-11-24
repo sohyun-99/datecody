@@ -11,6 +11,7 @@ import java.util.Optional;
 @Repository
 public interface StationBunRepository extends JpaRepository<Bun,Long> {
     List<Bun> findByStationNum(int stationNum);
+    List<Bun> findByStoreId(int storeId);
     List<Bun> findByStationNumAndKind(int stationNum, int kind);
 
 }
