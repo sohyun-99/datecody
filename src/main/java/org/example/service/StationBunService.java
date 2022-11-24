@@ -1,11 +1,14 @@
 package org.example.service;
 
 import lombok.RequiredArgsConstructor;
+import org.example.Entity.StationBun;
 import org.example.Entity.UserInfo;
 import org.example.login.UserRepository;
 import org.example.repository.StationBunRepository;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
+
+import java.util.Optional;
 
 @RequiredArgsConstructor
 @Service
@@ -16,9 +19,12 @@ public class StationBunService {
     /**
      * 불러오깅
      *
-     *
-     * @return
+     * @param station_name 지정한 지하철 역명
+     * @return 지정한 지하철 역에 대한 리스트 리턴
      */
+//    public Optional<StationBun> findByStation_name(String station_name){
+//        return stationBunRepository.findByStation_name(station_name);
+//    }
 
     /**
      * 불러오깅

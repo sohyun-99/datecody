@@ -1,10 +1,69 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
+<meta th:replace="frame/top.html">
+<!-- add your css here -->
+<title>프레임입니당</title>
+<html xmlns:th="http://www.thymeleaf.org">
 <body>
 
+<div class="col-lg-6">
+
+    <!-- Basic Card Example -->
+    <div class="card shadow mb-4">
+        <div class="card-header py-3">
+            <h6 class="m-0 font-weight-bold text-primary">기흥역 식사</h6>
+        </div>
+        <div class="card-body">
+            <tr th:each="bunNumList : ${bunNumList}">
+                <td th:if="${bunNumList.getKind() eq 1}" th:text="${bunNumList.getStoreName()}"></td>
+                <td th:if="${bunNumList.getKind() eq 1}" th:text="${bunNumList.getEtc()}"></td>
+            </tr>
+        </div>
+    </div>
+
+    <div class="card shadow mb-4">
+        <div class="card-header py-3">
+            <h6 class="m-0 font-weight-bold text-primary">기흥역 디저트</h6>
+        </div>
+        <div class="card-body">
+            <tr th:each="bunNumList : ${bunNumList}">
+                <td th:if="${bunNumList.getKind() eq 2}" th:text="${bunNumList.getStoreName()}"></td>
+                <td th:if="${bunNumList.getKind() eq 2}" th:text="${bunNumList.getEtc()}"></td>
+            </tr>
+        </div>
+    </div>
+
+    <div class="card shadow mb-4">
+        <div class="card-header py-3">
+            <h6 class="m-0 font-weight-bold text-primary">기흥역 액티비티</h6>
+        </div>
+        <div class="card-body">
+            <tr th:each="bunNumList : ${bunNumList}">
+                <td th:if="${bunNumList.getKind() eq 3}" th:text="${bunNumList.getStoreName()}"></td>
+                <td th:if="${bunNumList.getKind() eq 3}" th:text="${bunNumList.getEtc()}"></td>
+            </tr>
+        </div>
+    </div>
+
+    <div class="card shadow mb-4">
+        <div class="card-header py-3">
+            <h6 class="m-0 font-weight-bold text-primary">기흥역 코스 추천</h6>
+        </div>
+        <div class="card-body">
+            <td th:text="${rand1.getStoreName()}"></td>
+            <td th:text="${rand2.getStoreName()}"></td>
+            <td th:text="${rand3.getStoreName()}"></td>
+            </tr>
+        </div>
+    </div>
+
+    </div>
+
+</div>
+
+
+
+
+
+
+
 </body>
-</html>
+<meta th:replace="frame/footer.html">
