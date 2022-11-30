@@ -14,7 +14,14 @@
 <div class="col-lg-6">
     <div class="card shadow mb-4">
         <div class="card-header py-3">
-            <h6 class="m-0 font-weight-bold text-primary">가게 정보</h6>
+            <h6 class="m-0 font-weight-bold text-primary">
+                <th>가게 정보</th>
+                <th>👍 (추천수)</th>
+                <td th:text="${stationList.get(0).getRecommend()}"></td>
+                <input type='button' id=btnRecommend value="추천하기"/>
+
+
+            </h6>
         </div>
         <div class="card-body">
 
@@ -39,12 +46,7 @@
                 </br>
 
             </tr>
-            <tr>
-                <th>👍 (추천수)</th>
-                <td th:text="${stationList.get(0).getRecommend()}"></td>
-                </br>
 
-            </tr>
         </div>
     </div>
 </div>
@@ -52,5 +54,19 @@
 </div>
 </html>
 
-<!-- add your js here -->
+<script>
+    $("#btnRecommend").click(function(){
+        if(confirm("해당 글을 추천하시겠습니까?")){
+            // document.form1.action="recommend.do";
+            // document.form1.submit();
+
+            alert("해당 글을 추천하였습니다.")
+
+        }
+    });
+
+
+</script>
+
+
 <meta th:replace="frame/footer.html">
